@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blog Tangerino</title>
+<!-- CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<style>
+.body {
+	background-color: #ff5f11;
+}
+
+.breadcrumb-item {
+	margin-top: 15px
+}
+</style>
+<body class="body">
+
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">Blog Tangerino</a>
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item"><a class="nav-link active"
+								aria-current="page" target="blank"
+								href="https://tangerino.com.br/">Home</a></li>
+							<li class="nav-item"><a class="nav-link"
+								style="a: hover{background-color: Orange;" target="blank"
+								href="https://materiais.tangerino.com.br/seja-um-parceiro">Seja
+									Nosso Parceiro</a></li>
+						</ul>
+						<form class="d-flex">
+							<input class="form-control me-2" type="search"
+								placeholder="Search" aria-label="Search">
+							<button class="btn btn-outline-success" type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+		</div>
+		</div>
+	</header>
+	<main>
+		<div class="container" style="width: 60%; padding-bottom: 30px">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="/posts">Posts</a></li>
+					<li class="breadcrumb-item active"><a href="#">Post</a></li>
+				</ol>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="card text-center">				
+				<div class="card-body">
+					<h5 class="card-title"><span th:text="${post.titulo}"</span></h5>
+					<p class="card-text"><span th:utext="${#strings.abbreviate(post.texto,5000)}"></span></p>					
+				</div>
+				<div class="card-footer text-muted"><span th:text="${post.date}"></span></div>
+			</div>
+		</div>
+
+
+
+	</main>
+</body>
+
+</html>

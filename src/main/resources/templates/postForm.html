@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html>
+<head>
+<title>Blog Tangerino</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	crossorigin="anonymous">
+</head>
+<style>
+.body {
+	background-color: #ff5f11;
+}
+
+.breadcrumb-item {
+	margin-top: 15px
+}
+</style>
+<body class="body">
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+
+					<a class="navbar-brand" href="#">Blog Tangerino</a>
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item"><a class="nav-link active"
+								aria-current="page" target="blank"
+								href="https://tangerino.com.br/">Home</a></li>
+							<li class="nav-item"><a class="nav-link"
+								style="a: hover{background-color: Orange;" target="blank"
+								href="https://materiais.tangerino.com.br/seja-um-parceiro">Seja
+									Nosso Parceiro</a></li>
+						</ul>
+						<form class="d-flex">
+							<input class="form-control me-2" type="search"
+								placeholder="Search" aria-label="Search">
+							<button class="btn btn-outline-success" type="submit">Search</button>
+						</form>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+	</header>
+	<section>
+		<div class="container" style="width: 60%; padding-bottom: 30px">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="/posts">Posts</a></li>
+					<li class="breadcrumb-item active"><a href="#">Novo Post</a></li>
+				</ol>
+			</nav>
+		</div>
+
+		<div>
+			<div>
+				<!-- <th:block th:include="mensagemValidacao"></th:block>  -->
+
+				<div class="container">
+					<form method="post">
+						<div class="form-group">
+							<input type="text" class="form-control" name="titulo"
+								placeholder="Título *">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" name="autor"
+								placeholder="Autor *">
+						</div>
+
+						<textarea id="summernote" type="text" class="form-control"
+							name="texto" placeholder="texto *"></textarea>
+
+						<small class="form-text text-muted">(*) Campos
+							obrigatórios</small>
+
+						<button type="submit" class="btn btn-primary"
+							style="margin-top: 10px;">Publicar</button>
+						<a href="/posts" class="btn btn-light" role="button"
+							style="margin-top: 10px;">Cancelar</a>
+						
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+</body>
+
+</html>
